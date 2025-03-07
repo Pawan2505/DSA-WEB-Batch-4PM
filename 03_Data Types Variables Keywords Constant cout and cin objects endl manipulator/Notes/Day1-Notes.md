@@ -16,7 +16,6 @@ In C++, every program consists of the following essential components:
 #### **Program 1: `basic_program.cpp`**
 
 ```cpp
-// Filename: basic_program.cpp
 
 #include <iostream>  // Include the iostream library for input/output
 
@@ -58,7 +57,6 @@ Namespaces in C++ help organize code into logical groups and prevent name confli
 #### **Program 2: `using_namespace_global.cpp`**
 
 ```cpp
-// Filename: using_namespace_global.cpp
 
 #include <iostream>  // Include the iostream library for input/output
 
@@ -103,7 +101,6 @@ It is generally a good practice to avoid using `using namespace std;` in large p
 #### **Program 3: `output_with_explicit_std_namespace.cpp`**
 
 ```cpp
-// Filename: output_with_explicit_std_namespace.cpp
 
 #include <iostream>  // Include iostream library for input/output
 
@@ -145,7 +142,6 @@ It's important to handle errors and validate user input to ensure the program ru
 #### **Program 4: `basic_with_error_handling.cpp`**
 
 ```cpp
-// Filename: basic_with_error_handling.cpp
 
 #include <iostream>  // Include iostream library for input/output
 
