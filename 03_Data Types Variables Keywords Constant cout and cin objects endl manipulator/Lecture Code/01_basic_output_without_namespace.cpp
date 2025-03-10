@@ -1,5 +1,3 @@
-// // Filename: basic_output_without_namespace.cpp
-
 // #include <iostream> // Preprocessor directive to include iostream library
 
 // // The `main` function is the entry point of the program

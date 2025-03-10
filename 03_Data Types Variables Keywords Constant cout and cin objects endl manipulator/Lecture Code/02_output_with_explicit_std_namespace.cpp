@@ -1,5 +1,3 @@
-// Filename: output_with_explicit_std_namespace.cpp
-
 #include <iostream> // Preprocessor directive to include iostream library
 
 // The `main` function is the entry point of the program
