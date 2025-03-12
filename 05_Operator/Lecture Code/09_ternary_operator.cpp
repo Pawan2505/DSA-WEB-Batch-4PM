@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     // ==========================================
-    // 7. Ternary Operator (Conditional Expression)
+    // Ternary Operator (Conditional Expression)
     // ==========================================
     int age;
     cout << "Enter your age: ";

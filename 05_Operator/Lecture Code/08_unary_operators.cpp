@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     // ==========================================
-    // 6. Unary Operators: Pre and Post Increment/Decrement
+    // Unary Operators: Pre and Post Increment/Decrement
     // ==========================================
     int a = 10;
 

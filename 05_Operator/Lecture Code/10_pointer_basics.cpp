@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     // ==========================================
-    // 8. Pointer Basics
+    // Pointer Basics
     // ==========================================
     int a = 10;
 

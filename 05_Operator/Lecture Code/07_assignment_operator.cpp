@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     // ==========================================
-    // 5. Assignment Operator (+=, -=, *=, /=, %=)
+    // Assignment Operator (+=, -=, *=, /=, %=)
     // ==========================================
     int vishal = 10;
 
