@@ -67,129 +67,86 @@
 //     return 0;
 // }
 
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// int main()
-// {
+int main()
+{
 
-//     // Assignment Operator
+    // ==========================================
+    // 1. Assignment Operators (+=, -=, *=, /=, %=)
+    // ==========================================
+    int vishal = 10;
 
-//     int vishal = 10;
+    // Using assignment operator to add 5
+    vishal += 5; // vishal = vishal + 5;  => vishal becomes 15
 
-//     // vishal = vishal + 5;
+    // Using assignment operator to subtract 2
+    vishal -= 2; // vishal = vishal - 2;  => vishal becomes 13
 
-//     // or
+    // Using assignment operator to multiply by 2
+    vishal *= 2; // vishal = vishal * 2;  => vishal becomes 26
 
-//     vishal += 5;  // 15
+    // Using assignment operator to divide by 13
+    vishal /= 13; // vishal = vishal / 13; => vishal becomes 2
 
-//     // vishal = vishal - 2
+    // Using assignment operator to find remainder when divided by 2
+    vishal %= 2; // vishal = vishal % 2;  => vishal becomes 0
 
-//     vishal -= 2; // 13
+    cout << "Total amount : " << vishal << endl; // Output final value (0)
 
-//     vishal *= 2; //26
+    // ==========================================
+    // 2. Unary Operators (Pre/Post Increment/Decrement)
+    // ==========================================
 
-//     vishal /= 13;  //2
+    // Pre-increment (increments value first, then uses it)
+    int a = 10;
+    cout << ++a << endl; // 11 (a is incremented first)
 
-//     vishal %= 2;
+    // Post-increment (uses value first, then increments)
+    cout << a++ << endl; // 11 (value used first, then incremented)
+    cout << a << endl;   // 12 (a is incremented)
 
-//     cout << "Total amount : " << vishal << endl;
-// }
+    // Pre-decrement (decrements value first, then uses it)
+    cout << --a << endl; // 11 (a is decremented first)
 
-// uniary operator :
+    // Post-decrement (uses value first, then decrements)
+    cout << a-- << endl; // 11 (value used first, then decremented)
+    cout << a << endl;   // 10 (a is decremented)
 
-/*
+    // ==========================================
+    // 3. Ternary Operator
+    // ==========================================
+    // Ternary operator provides a shorthand for an if-else statement.
+    // It evaluates a condition and returns one value if true, and another if false.
+    int age;
+    cout << "Enter your age: ";
+    cin >> age;
 
-1. pre - increment-> ++a => isme sabse phle increment hota hai fir value used hota hai.
-2. post - increment-> a++ => sabse phle value use hota hai fir increment hota hai.
-3. pre - decrement-> --a => isme sabse phle decrement hota hai fir value used hota hai.
-4. post - decrement -> a-- => sabse phle value use hota hai fir decrement hota hai.
+    // Check if the age is greater than or equal to 18 using ternary operator
+    (age >= 18) ? cout << "You are eligible for voting!" : cout << "Sorry, You are not eligible for voting!" << endl;
 
-*/
+    // ==========================================
+    // 4. Pointer Basics
+    // ==========================================
+    // Pointers store the memory address of another variable.
+    // The '*' is used to dereference a pointer, and '&' is used to get the memory address.
 
-// #include<iostream>
-// using namespace std;
+    int aValue = 10;
 
-// int main(){
+    // Pointer to int, storing the address of aValue
+    int *ptr = &aValue;
 
-//     int a = 10;
+    // Output the size of the variable 'aValue'
+    cout << "Size of aValue: " << sizeof(aValue) << " bytes" << endl;
 
-//     cout << ++a << endl; // 11
-// }
+    // Output the value of 'aValue' and the value via the pointer 'ptr'
+    cout << "Value of aValue: " << aValue << endl;
+    cout << "Value pointed by ptr: " << *ptr << endl; // Dereferencing pointer to access value
 
-// #include <iostream>
-// using namespace std;
+    // Output the address of 'aValue' and the address stored in the pointer 'ptr'
+    cout << "Address of aValue: " << &aValue << endl; // & gives the memory address of aValue
+    cout << "Address stored in ptr: " << ptr << endl; // ptr stores the address of aValue
 
-// int main()
-// {
-
-//     int a = 10;
-
-//     cout << a++ << endl; // 10
-
-//     cout << a << endl; //11
-// }
-
-// #include <iostream>
-// using namespace std;
-
-// int main()
-// {
-
-//     int a = 10;
-
-//     cout << --a << endl; // 9
-
-//     cout << ++a << endl; // 10
-// }
-
-// #include <iostream>
-// using namespace std;
-
-// int main()
-// {
-
-//     int a = 10;
-
-//     cout << a-- << endl; // 10
-
-//     cout << ++a << endl; // 10
-// }
-
-// Ternary Operator
-
-// #include <iostream>
-// using namespace std;
-
-// int main()
-// {
-
-//     int age;
-//     cout << "Enter your age : ";
-//     cin >> age;
-
-//     (age >= 18) ? cout << "You are eligible for vote!" : cout << "Sorry, You are not eligible for vote!"<<endl;
-// }
-
-// Pointer -> *
-
-// #include<iostream>
-// using namespace std;
-
-// int main(){
-//     int a = 10;
-
-//     int *ptr = &a;
-
-//     // sizeof()
-
-//     cout << "size of a : " << sizeof(a) << endl;
-
-//     // value
-//     cout << "Value of a : " << a << endl;
-//     cout << "value of *ptr : " << *ptr << endl;
-//     // address
-
-//     cout << "address of a : " << &a << endl;
-//     cout << "address store at ptr : " << ptr << endl;
-// }
+    return 0;
+}
