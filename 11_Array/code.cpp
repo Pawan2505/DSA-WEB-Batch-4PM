@@ -205,24 +205,95 @@
 //     }
 // }
 
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[5] = {12, 34, 56, 67, 90};
+
+//     int position = 2;
+
+//     for (int i = position; i < 5; i++)
+//     {
+//         arr[i] = arr[i + 1];
+//     }
+
+//     cout << "Array : ";
+
+//     for (int i = 0; i < 4; i++)
+//     {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[] = {12, 34, 56, 67, 90,223,345,56};
+
+//     // for each loop
+
+//     for (int harsha : arr)
+//     {
+//         cout << harsha << endl;
+//     }
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     int row = 3;
+//     int col = 4;
+
+//     int arr[row][col] = {
+//             {12, 34, 56, 78},
+//             { 9, 23, 45, 67},
+//             {899, 0, 23, 4}
+//         };
+
+//     arr[2][1] = 100;
+
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < col; j++)
+//         {
+//             cout << arr[i][j] << " ";
+//         }
+//         cout << endl;
+//     }
+// }
+
 #include <iostream>
 using namespace std;
+
 int main()
 {
-    int arr[5] = {12, 34, 56, 67, 90};
+    int row = 3;
+    int col = 4;
 
-    int position = 2;
+    int arr[row][col];
 
-    for (int i = position; i < 5; i++)
+    for (int i = 0; i < row; i++)
     {
-        arr[i] = arr[i + 1];
+        for (int j = 0; j < col; j++)
+        {
+            cout << "Enter data at " << i << " row and " << j << " col :";
+            cin >> arr[i][j];
+        }
+
     }
 
-    cout << "Array : ";
-
-    for (int i = 0; i < 4; i++)
+    cout << "Array : "<<endl;
+    for (int i = 0; i < row; i++)
     {
-        cout << arr[i] << " ";
+        for (int j = 0; j < col; j++)
+        {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
     }
-    cout << endl;
 }
