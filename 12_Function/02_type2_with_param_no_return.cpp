@@ -1,12 +1,14 @@
 #include <iostream>
 using namespace std;
 
-void add(int x, int y)
+// parameter recieve
+int add(int x, int y)
 {
     cout << "Sum : " << x + y << endl;
 }
 
 int main()
 {
+    // argument send
     add(50, 60);
 }
