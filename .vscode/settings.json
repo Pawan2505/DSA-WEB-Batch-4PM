@@ -98,6 +98,11 @@
     "stdexcept": "cpp",
     "streambuf": "cpp",
     "typeinfo": "cpp",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "forward_list": "cpp",
+    "list": "cpp",
+    "unordered_set": "cpp",
+    "regex": "cpp",
+    "valarray": "cpp"
   }
 }
