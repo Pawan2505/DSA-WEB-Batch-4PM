@@ -20,7 +20,7 @@ int secondLargest(int arr[], int n)
         }
     }
 
-    if (second == INT_MIN)
+    if(second == INT_MIN)
     {
         cout << "Second largest element not found (all elements might be same)." << endl;
         return -1;
