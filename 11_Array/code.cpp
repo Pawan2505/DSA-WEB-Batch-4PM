@@ -429,3 +429,138 @@
 
 // Removing Duplicate elements from an array
 
+// sorting array
+
+// #include<iostream>
+// #include<algorithm>
+// using namespace std;
+
+// int main(){
+//     int n = 6;
+//     int arr[n] = {12, 35, 7, 8, 89, 2};
+
+//     // cout << arr << endl;
+//     // cout << &arr[0] << endl;
+
+//     // cout << arr + 1 << endl;
+//     // cout << &arr[1] << endl;
+
+//     cout << "Original Array : ";
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+//     // sort(arr, arr + n);  // -> asscending order (default)
+//     sort(arr, arr + n, greater<int>());  // descending order
+
+//     cout << "Sorted Array : ";
+//     for (int i = 0; i < n; i++){
+//         cout << arr[i] << " ";
+//     }
+// }
+// https://www.geeksforgeeks.org/stdgreater-in-c-with-examples/
+
+// #include <iostream>
+// #include <algorithm>
+// using namespace std;
+
+// int ascdesc(int arr[], int start, int end){
+
+//     cout << "Original Array : ";
+//     for (int i = 0; i < end; i++)
+//     {
+//         cout << arr[i] << " ";
+//     }
+
+//     cout << endl;
+
+//     int mid = start + (end - start) / 2;
+
+//     sort(arr, arr + mid);
+//     sort(arr + mid, arr + end, greater<int>());
+//     cout << "Sorted Array : ";
+//     for (int i = 0; i < end; i++)
+//     {
+//         cout << arr[i] << " ";
+//     }
+// }
+
+// int main()
+// {
+//     int n = 6;
+//     int arr[n] = {12, 35, 7, 8, 89, 2};
+
+//     ascdesc(arr, 0, n);
+// }
+
+
+
+// #include <iostream>
+// #include <map>
+// using namespace std;
+
+// int frequeancy(int arr[], int n)
+// {
+
+//     map<int, int> freq;
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         freq[arr[i]]++;
+//     }
+
+//     cout << "frequency of elements in an array : " << endl;
+
+//     for (auto pair : freq)
+//     {
+//         cout << pair.first << " -> " << pair.second << endl;
+//     }
+// }
+
+// int main()
+// {
+//     int n = 8;
+//     int arr[n] = {12, 34, 5, 12, 34, 5, 23, 45};
+
+//     frequeancy(arr, n);
+// }
+
+// Finding the Longest Palindrome in an Array
+
+// 121->121 = > Palindrome Number
+
+#include<iostream>
+#include<climits>
+using namespace std;
+
+bool isPalindrome(int num){
+    int temp = num;
+    int reverse = 0;
+
+    while(temp>0){
+        int digit = temp % 10;
+        reverse = reverse * 10 + digit;
+        temp = temp / 10;
+    }
+
+    return reverse == num;
+}
+
+
+int main(){
+    int n = 8;
+    int arr[n] = {121, 333, 545, 78, 999, 45645, 123321, 7635};
+   
+    int largestPalindrom = INT_MIN;
+
+    for (int i = 0; i < n; i++){
+        if (isPalindrome(arr[i])){
+            if(arr[i] > largestPalindrom){
+                largestPalindrom = arr[i];
+            }
+        }
+    }
+
+    cout << "Largest Palindrom element : " << largestPalindrom << endl;
+}
