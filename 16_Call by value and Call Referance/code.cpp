@@ -1,17 +1,23 @@
 // Call by value
 
-// #include<iostream>
-// using namespace std;
+#include<iostream>
+using namespace std;
 
-// int data(int x){
-//     cout << "x : " <<x<< endl;
-// }
+int data(int &x){
+    cout << "x : " <<x<< endl;  // 10
 
-// int main(){
-//     int x = 10;
+    x = 100;
+    cout << " data -> x : " << x << endl; // 100
+}
 
-//     data(x);
-// }
+
+int main(){
+    int x = 10;
+
+    data(x);
+
+    cout << "x : " << x << endl;  // 100
+}
 
 // Call by reference
 
@@ -31,4 +37,4 @@
 //     data(x);
 
 //     cout << "x : " << x << endl; //45
-// }
+// } 
