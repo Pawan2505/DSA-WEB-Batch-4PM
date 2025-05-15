@@ -4,45 +4,130 @@
 
 // sizeof(Student) tells how much memory one object of class Student would occupy if an object were created. It does not depend on whether an object is actually created or not.
 
+// #include <iostream>    c
+// using namespace std;
 
+// class Student
+// {
 
-#include <iostream>    c  
+// private:
+//     string name;
+//     static int age;
+//     int id;
+
+// public:
+//     // setter method
+//     void setdetails(string name , int id)
+//     {
+//         this->name = name;
+//         this->id = id;
+//     }
+
+//     // getter method
+//     void getDetails()
+//     {
+//         cout << "Name : " << name << endl;
+//         cout << "Age : " << age << endl;
+//         cout << "Id : " << id << endl;
+//     }
+// };
+
+// int Student::age = 23;
+
+// int main()
+// {
+//     cout << "Size of Student Class : " << sizeof(Student) << endl;
+
+//     Student s1;
+
+//     s1.setdetails("Jayesh", 10);
+
+//     s1.getDetails();
+// }
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Student{
+//     private :
+//         string name;
+//         int age;
+
+//     public :
+
+//     void setDetails(string name, int age){
+//         this->name = name;
+//         this->age = age;
+//     }
+//     void display(){
+//         cout << "Name : " << this->name << endl;
+//         cout << "Age : " << this->age << endl;
+//     }
+// };
+
+// int main(){
+//     Student s1,s2;
+
+//     s1.setDetails("Vishal", 20);
+//     s2.setDetails("Harsha", 16);
+
+//     s1.display();
+//     s2.display();
+// }
+
+//  Constructor :-
+
+#include <iostream>
+
 using namespace std;
 
 class Student
 {
-
 private:
     string name;
-    static int age;
-    int id;
+    int age;
+    int salary;
 
 public:
-    // setter method
-    void setdetails(string name , int id)
+    // Parameterless constructor
+    Student()
     {
-        this->name = name;
-        this->id = id;
+        cout << "Deafult constructor called...";
     }
 
-    // getter method
-    void getDetails()
+    Student(string name, int age)
     {
-        cout << "Name : " << name << endl;
-        cout << "Age : " << age << endl;
-        cout << "Id : " << id << endl;
+        this->name = name;
+        this->age = age;
+    }
+    Student(string name, int age,int salary)
+    {
+        this->name = name;
+        this->age = age;
+        this->salary = salary;
+    }
+
+    void display()
+    {
+        cout << "Name : " << this->name << endl;
+        cout << "Age : " << this->age << endl;
+    }
+
+    void details(){
+        cout << "Name : " << this->name << endl;
+        cout << "Age : " << this->age << endl;
+        cout << "Salary : " << this->salary << endl;
     }
 };
 
-int Student::age = 23;
-
 int main()
 {
-    cout << "Size of Student Class : " << sizeof(Student) << endl;
+    Student s1("Abhishek", 21);
 
-    Student s1;
+    s1.display();
 
-    s1.setdetails("Jayesh", 10);
+    Student s2("Pawan", 25,999);
 
-    s1.getDetails();
+    s2.details();
 }
