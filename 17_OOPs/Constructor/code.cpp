@@ -78,44 +78,205 @@
 
 //  Constructor :-
 
+// #include <iostream>
+
+// using namespace std;
+
+// class Student
+// {
+// private:
+//     string name;
+//     int age;
+//     int salary;
+
+// public:
+//     // Parameterless constructor
+//     Student()
+//     {
+//         cout << "Deafult constructor called...";
+//     }
+
+//     Student(string name, int age)
+//     {
+//         this->name = name;
+//         this->age = age;
+//     }
+//     Student(string name, int age,int salary)
+//     {
+//         this->name = name;
+//         this->age = age;
+//         this->salary = salary;
+//     }
+
+//     void display()
+//     {
+//         cout << "Name : " << this->name << endl;
+//         cout << "Age : " << this->age << endl;
+//     }
+
+//     void details(){
+//         cout << "Name : " << this->name << endl;
+//         cout << "Age : " << this->age << endl;
+//         cout << "Salary : " << this->salary << endl;
+//     }
+// };
+
+// int main()
+// {
+//     Student s1("Abhishek", 21);
+
+//     s1.display();
+
+//     Student s2("Pawan", 25,999);
+
+//     s2.details();
+// }
+
+// #include <iostream>
+
+// using namespace std;
+
+// class Student
+// {
+// private:
+//     string name;
+//     int age;
+//     int salary;
+
+// public:
+//     // Parameterless constructor
+//     Student()
+//     {
+//         name = "Harsha";
+//         age = 11;
+//         salary = 10000000;
+//     }
+
+//     Student(string name, int age = 22)
+//     {
+//         this->name = name;
+//         this->age = age;
+//     }
+//     Student(string name, int age, int salary)
+//     {
+//         this->name = name;
+//         this->age = age;
+//         this->salary = salary;
+//     }
+
+//     void display()
+//     {
+//         cout << "Name : " << this->name << endl;
+//         cout << "Age : " << this->age << endl;
+//     }
+
+//     void details()
+//     {
+//         cout << "Name : " << this->name << endl;
+//         cout << "Age : " << this->age << endl;
+//         cout << "Salary : " << this->salary << endl;
+//     }
+// };
+
+// int main()
+// {
+//     // Student s;
+
+//     // s.details();
+
+//     // Student s1("Abhishek",11);
+
+//     // s1.display();
+
+//     // Student s2("Pawan", 25, 999);
+
+//     // s2.details();
+// }
+
+// shallo constructor
+
+// #include <iostream>
+
+// using namespace std;
+
+// class Student
+// {
+// private:
+//     string name;
+//     int age;
+//     int salary;
+
+// public:
+//     Student(string name, int age, int salary)
+//     {
+//         this->name = name;
+//         this->age = age;
+//         this->salary = salary;
+//     }
+
+//     Student(Student &other)
+//     {
+//         this->name = other.name;
+//         this->age = other.age;
+//         this->salary = other.salary;
+//     }
+
+//     void details()
+//     {
+//         cout << "Name : " << this->name << endl;
+//         cout << "Age : " << this->age << endl;
+//         cout << "Salary : " << this->salary << endl;
+//     }
+// };
+
+// int main()
+// {
+
+//     Student s1("Pawan", 25, 999);
+
+//     Student s2 = s1; // shallow copy
+
+//     s2.details();
+// }
+
+// deep copy constructor
+
 #include <iostream>
 
 using namespace std;
 
 class Student
 {
-private:
-    string name;
+public:
+    string *name;
     int age;
     int salary;
 
 public:
-    // Parameterless constructor
-    Student()
+    Student(string name, int age, int salary)
     {
-        cout << "Deafult constructor called...";
-    }
-
-    Student(string name, int age)
-    {
-        this->name = name;
-        this->age = age;
-    }
-    Student(string name, int age,int salary)
-    {
-        this->name = name;
+        this->name = new string(name);
         this->age = age;
         this->salary = salary;
     }
 
-    void display()
+    Student(Student &other)
     {
-        cout << "Name : " << this->name << endl;
-        cout << "Age : " << this->age << endl;
+        this->name = new string(*other.name);
+        this->age = other.age;
+        this->salary = other.salary;
     }
 
-    void details(){
-        cout << "Name : " << this->name << endl;
+    ~Student()
+    {
+        cout << "Destructor called..." << endl;
+        delete name;
+        // cout << "After destructor : " << *name << endl;  // not work
+    }
+
+    void details()
+    {
+        cout << "Name : " << *name << endl;
         cout << "Age : " << this->age << endl;
         cout << "Salary : " << this->salary << endl;
     }
@@ -123,11 +284,12 @@ public:
 
 int main()
 {
-    Student s1("Abhishek", 21);
 
-    s1.display();
+    Student s1("Pawan", 25, 999);
 
-    Student s2("Pawan", 25,999);
+    Student s2 = s1; // deep copy
 
     s2.details();
 }
+
+/*assignment copy constructor*/
