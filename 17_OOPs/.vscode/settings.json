@@ -57,6 +57,7 @@
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": true,
   "files.associations": {
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "new": "cpp"
   }
 }
